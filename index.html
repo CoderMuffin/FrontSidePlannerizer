@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js"></script>
+      <script src="oc.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>3D view</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+      <noscript>Uh oh! This page needs javascript to work, and it looks like you've turned it off!</noscript>
+      <div id="scene" class="m3d"></div>
+      <div style="position:absolute;left:800px;max-width:350px">
+      <p>This is a playground where you can test different front, side and plans of shapes to see what 3D model they produce. Click on the grids to the right to start colouring in the perspective, and click and drag on the black box to orbit around your shape.</p>
+      <p>The simulation is built in such a way that a cube will only be shown in the result if it is shown on all faces. If the result is not as you expected, try checking there are no unmatched squares.</p>
+      <button onclick="toggleMode()">Toggle mode</button>
+      </div>
+      <p>Not intented for use on a mobile phone.</p><span style="color:#3333ff">Front</span> <span style="color:#ff3333">Side</span> <span style="color:#33aa33">Plan</span>
+      <div id="cubeContainer" class="m3d">
+    <div id="front" class="grid-container">
+    </div>
+    <div id="side" class="grid-container">
+    </div>
+    <div id="plan" class="grid-container">
+    </div>
+    </div>
+    <script src="script.js"></script>
+    <p style="position:fixed;right:10px;bottom:0px">Made with &lt;3 in 2021 by John Williams</p>
+  </body>
+</html>

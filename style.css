@@ -1,0 +1,93 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+  width:200px;
+  height:200px
+}
+.grid-item {
+  background-color: #ddd;
+  margin:0;
+  text-align: center;
+}
+#plan {
+    position: absolute;
+    top:10px;
+    left:440px;
+    background-color: #77ff77;
+    transition: transform 1s, top 1s, left 1s;
+    float:left;
+}
+.m3d > #plan {
+    top:10px;
+    left:100px;
+    transform: translateY(-110px) rotateX(90deg);
+}
+#front {
+    position: absolute;
+    top:10px;
+    left:0px;
+    background-color: #7777ff;
+    transition: transform 1s, top 1s, left 1s;
+    float:left;
+}
+.m3d > #front {
+    top:10px;
+    left:100px;
+    transform: translateZ(110px);
+}
+#side {
+    position: absolute;
+    top:10px;
+    left:220px;
+    background-color: #ff7777;
+    transition: transform 1s, top 1s, left 1s;
+    float:left;
+    transform: rotateY(-180deg);
+}
+.m3d > #side {
+    top:10px;
+    left:100px;
+    transform: translateX(110px) rotateY(-90deg);
+}
+
+#cubeContainer {
+    transform-style: preserve-3d;
+    position: relative;
+    height:600px;
+    width:200px;
+    transition:transform 1s,width 1s,height 1s;
+}
+
+#cubeContainer.m3d {
+    height:200px;
+    width:200px;
+    transform: rotateX(-45deg) rotateY(-45deg);
+}
+
+* {
+    font-family:"Trebuchet MS",Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#scene > * {
+    position:absolute;
+    border-radius:10px;
+    top:330px;
+    left:10px;
+    transition: top 1s, left 1s;
+}
+#scene.m3d > * {
+    left:360px;
+    top:20px;
+}
+
+button {
+    border-radius: 15px;
+    height: 30px;
+    border: 0;
+    padding-left:10px;
+    padding-right:10px;
+    background-color: #aa77ff;
+    outline: 0;
+}
